@@ -11,6 +11,7 @@
     --color-amber-900: oklch(41.4% 0.112 45.904);
     --color-green-200: oklch(92.5% 0.084 155.995);
     --color-green-300: oklch(87.1% 0.15 154.449);
+    --color-green-400: oklch(79.2% 0.209 151.711);
     --color-green-600: oklch(62.7% 0.194 149.214);
     --color-emerald-400: oklch(76.5% 0.177 163.223);
     --color-cyan-900: oklch(39.8% 0.07 227.392);
@@ -457,6 +458,10 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
+  .border-t-2 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 2px;
+  }
   .border-t-3 {
     border-top-style: var(--tw-border-style);
     border-top-width: 3px;
@@ -481,11 +486,29 @@
     border-left-style: var(--tw-border-style);
     border-left-width: 3px;
   }
+  .border-black {
+    border-color: var(--color-black);
+  }
   .border-gray-400 {
     border-color: var(--color-gray-400);
   }
   .border-green-600 {
     border-color: var(--color-green-600);
+  }
+  .border-t-black {
+    border-top-color: var(--color-black);
+  }
+  .border-t-green-400 {
+    border-top-color: var(--color-green-400);
+  }
+  .border-t-green-600 {
+    border-top-color: var(--color-green-600);
+  }
+  .border-t-white {
+    border-top-color: var(--color-white);
+  }
+  .border-b-black {
+    border-bottom-color: var(--color-black);
   }
   .border-b-gray-400 {
     border-bottom-color: var(--color-gray-400);
@@ -612,6 +635,12 @@
   }
   .pl-\[20\%\] {
     padding-left: 20%;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .align-middle {
+    vertical-align: middle;
   }
   .text-2xl {
     font-size: var(--text-2xl);
