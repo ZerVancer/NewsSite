@@ -253,8 +253,14 @@
     width: calc(var(--spacing) * 100);
     height: calc(var(--spacing) * 100);
   }
+  .max-h-1 {
+    max-height: calc(var(--spacing) * 1);
+  }
   .max-h-10 {
     max-height: calc(var(--spacing) * 10);
+  }
+  .max-h-15 {
+    max-height: calc(var(--spacing) * 15);
   }
   .max-h-152 {
     max-height: calc(var(--spacing) * 152);
@@ -289,8 +295,38 @@
   .max-w-2\/3 {
     max-width: calc(2 / 3 * 100%);
   }
+  .max-w-10 {
+    max-width: calc(var(--spacing) * 10);
+  }
+  .max-w-15 {
+    max-width: calc(var(--spacing) * 15);
+  }
+  .max-w-18 {
+    max-width: calc(var(--spacing) * 18);
+  }
+  .max-w-20 {
+    max-width: calc(var(--spacing) * 20);
+  }
+  .max-w-25 {
+    max-width: calc(var(--spacing) * 25);
+  }
+  .max-w-50 {
+    max-width: calc(var(--spacing) * 50);
+  }
+  .max-w-100 {
+    max-width: calc(var(--spacing) * 100);
+  }
+  .max-w-\[1\%\] {
+    max-width: 1%;
+  }
   .max-w-\[5\%\] {
     max-width: 5%;
+  }
+  .max-w-\[6\%\] {
+    max-width: 6%;
+  }
+  .max-w-\[7\%\] {
+    max-width: 7%;
   }
   .max-w-\[10\%\] {
     max-width: 10%;
@@ -312,6 +348,15 @@
   }
   .flex-auto {
     flex: auto;
+  }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
+  .shrink {
+    flex-shrink: 1;
+  }
+  .shrink-0 {
+    flex-shrink: 0;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -435,6 +480,9 @@
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .p-1 {
+    padding: calc(var(--spacing) * 1);
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
