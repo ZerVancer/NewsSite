@@ -6,25 +6,36 @@
 		<link href="./output.css" rel="stylesheet">
 	</head>
 	<body class="bg-gray-200">
-		<header class=" sticky top-0 bg-white border-b-4 border-green-600">
-			<nav class="mx-auto flex items-center justify-between p-2 md:pr-6 md:pl-6 md:max-w-[60%]">
-				<a href="index.html" class="max-w-[5%]">
-					<img src="resources/Symbol.png" alt="Logo">
-				</a>
-				<div class="flex items-center gap-x-6">
-					<a href="" class="border rounded-2xl p-2 hover:bg-gray-200 hover:scale-110">Link 1</a>
-					<a href="" class="border rounded-2xl p-2 hover:bg-gray-200 hover:scale-110">Link 2</a>
-					<a href="" class="border rounded-2xl p-2 hover:bg-gray-200 hover:scale-110">Link 3</a>
-					<a href="" class="border rounded-2xl p-2 hover:bg-gray-200 hover:scale-110">Link 4</a>
+		<header class="sticky z-2 top-0 bg-white border-b-4 border-green-600">
+			<nav class="m-auto flex flex-col sm:max-w-290">
+				<div id="navContent" class="flex flex-auto items-center justify-between m-1 sm:m-2 sm:ml-10 sm:mr-10 lg:m-2 ">
+					<a href="index.html" class="w-15">
+						<img src="resources/Symbol.png" loading="lazy"  alt="Logo">
+					</a>
+					<div class="hidden sm:flex items-center gap-x-6">
+						<a href="" class="border rounded-2xl p-2 hover:bg-gray-200 hover:scale-110">Link 1</a>
+						<a href="" class="border rounded-2xl p-2 hover:bg-gray-200 hover:scale-110">Link 2</a>
+						<a href="" class="border rounded-2xl p-2 hover:bg-gray-200 hover:scale-110">Link 3</a>
+						<a href="" class="border rounded-2xl p-2 hover:bg-gray-200 hover:scale-110">Link 4</a>
+					</div>
+					<button type="button" onclick="toggleHamburgerMenu()" class="sm:hidden w-12 h-12 cursor-pointer mr-2">
+						<img src="resources/HamburgerMenuIcon.png" alt="">
+					</button>
+				</div>
+				<div id="hamburgerMenuContent" class="hidden border-t-2 border-green-600 bg-gray-700 text-white flex-col gap-2">
+					<a href="" class="hover:bg-gray-200 hover:text-black p-2 pl-4 pr-4">Link 1</a>
+					<a href="" class="hover:bg-gray-200 hover:text-black p-2 pl-4 pr-4">Link 2</a>
+					<a href="" class="hover:bg-gray-200 hover:text-black p-2 pl-4 pr-4">Link 3</a>
+					<a href="" class="hover:bg-gray-200 hover:text-black p-2 pl-4 pr-4">Link 4</a>
 				</div>
 			</nav>
 		</header>
 
-		<section class="flex p-12 pl-18 pr-18 bg-gray-200 justify-center gap-x-10">
-			<a href="" id="mainSection" class="border-l-3 border-l-green-600 border-b-3 border-b-black bg-white max-w-2/3 md:max-w-[40%] max-h-154 overflow-hidden hover:scale-105">
-				<img src="resources/BackToTheFuturePoster.png" alt="ArticleImge" class="md:max-h-75 float-left mr-2">
+		<section class="m-auto flex p-12 lg:pl-0 lg:pr-0 bg-gray-200 justify-center gap-x-10 max-w-290">
+			<a href="" id="mainSection" class="border-l-3 border-l-green-600 border-b-3 border-b-black bg-white max-h-154 overflow-hidden hover:scale-105">
+				<img src="resources/BackToTheFuturePoster.png" alt="ArticleImge" loading="lazy"  class="max-h-75 float-left mr-2">
 				<h2 class="text-4xl">HEADER TEXT</h2>
-				<p class="pl-1">
+				<p class="pl-1 pr-1">
 				Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text 
 				Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text 
 				Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text 
@@ -39,96 +50,114 @@
 				Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text 
 				</p>
 			</a>
-			<div id="sideSection" class="flex flex-wrap max-w-1/3 md:max-w-[20%]">
-				<a href="" id="sideArticle1" class="border-l-3 border-l-green-600 border-b-3 border-black md:max-h-50 mb-2 overflow-hidden bg-white hover:scale-105">
-					<img src="resources/LegoLogo.png" alt="ArticleImage" class="md:max-h-30 float-left mr-2">
+			<div id="sideSection" class="hidden lg:flex flex-wrap min-w-80 max-w-80">
+				<a href="" id="sideArticle1" class="border-l-3 border-l-green-600 border-b-3 border-black max-h-50 mb-2 overflow-hidden bg-white hover:scale-105">
+					<img src="resources/LegoLogo.png" alt="ArticleImage" loading="lazy"  class="max-h-30 float-left mr-2">
 					<h3 class="text-2xl">
-						TEST HEADER
+						HEADER TEXT
 					</h3>
-					<p class="pl-1">
-					tetststststs ttetstststststt etststststs ttetstststst sttetstst stststtets tstststst tetststst ststtetstst stststtetst stst ststtetstst stststtetststs tstst tetstst stststtets tststststt etstst ststs tetstst stststte tstststststt etstststs tsttetststst ststte tststst ststtetst stststst tetststs tststtet sts tststs ttetststs tststte tststs tststtetst stststst tetsts tststst tetstst stst sttetstst stststte tststst stst tetstst ststs ttetsts tstststtetststs tststtets tststst stt etstststst sttetsts tststst tetststs tststtetsts tststst
+					<p class="pl-1 pr-1">
+						Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text 
+						Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text 
+						Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text 
 					</p>
 				</a>
-				<a href="" id="sideArticle2" class="border-l-3 border-l-green-600 border-b-3 border-b-black md:max-h-50 mb-2 overflow-hidden bg-white hover:scale-105">
-					<img src="resources/BackToTheFuturePoster.png" alt="ArticleImage" class="md:max-h-30 float-left mr-2">
+				<a href="" id="sideArticle2" class="border-l-3 border-l-green-600 border-b-3 border-b-black max-h-50 mb-2 overflow-hidden bg-white hover:scale-105">
+					<img src="resources/BackToTheFuturePoster.png" alt="ArticleImage" loading="lazy"  class="sm:max-h-30 float-left mr-2">
 					<h3 class="text-2xl">
-						TEST HEADER
+						HEADER TEXT
 					</h3>
-					<p class="pl-1">
-					tetststststs ttetstststststt etststststs ttetstststst sttetstst stststtets tstststst tetststst ststtetstst stststtetst stst ststtetstst stststtetststs tstst tetstst stststtets tststststt etstst ststs tetstst stststte tstststststt etstststs tsttetststst ststte tststst ststtetst stststst tetststs tststtet sts tststs ttetststs tststte tststs tststtetst stststst tetsts tststst tetstst stst sttetstst stststte tststst stst tetstst ststs ttetsts tstststtetststs tststtets tststst stt etstststst sttetsts tststst tetststs tststtetsts tststst
+					<p class="pl-1 pr-1">
+						Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text 
+						Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text 
+						Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text 
 					</p>
 				</a>
-				<a href="" id="sideArticle3" class="border-l-3 border-l-green-600 border-b-3 border-b-black md:max-h-50 mb-2 overflow-hidden bg-white hover:scale-105">
-					<img src="resources/LegoLogo.png" alt="ArticleImage" class="md:max-h-30 float-left mr-2">
+				<a href="" id="sideArticle3" class="border-l-3 border-l-green-600 border-b-3 border-b-black max-h-50 mb-2 overflow-hidden bg-white hover:scale-105">
+					<img src="resources/LegoLogo.png" alt="ArticleImage" loading="lazy"  class="sm:max-h-30 float-left mr-2">
 					<h3 class="text-2xl">
-						TEST HEADER
+						HEADER TEXT
 					</h3>
-					<p class="pl-1">
-					tetststststs ttetstststststt etststststs ttetstststst sttetstst stststtets tstststst tetststst ststtetstst stststtetst stst ststtetstst stststtetststs tstst tetstst stststtets tststststt etstst ststs tetstst stststte tstststststt etstststs tsttetststst ststte tststst ststtetst stststst tetststs tststtet sts tststs ttetststs tststte tststs tststtetst stststst tetsts tststst tetstst stst sttetstst stststte tststst stst tetstst ststs ttetsts tstststtetststs tststtets tststst stt etstststst sttetsts tststst tetststs tststtetsts tststst
+					<p class="pl-1 pr-1">
+						Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text 
+						Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text 
+						Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text 
 					</p>
 				</a>
 			</div>
 		</section>
 
-		<section class="border-t-2 border-t-black text-center mx-auto md:max-w-[60%] p-6">
+		<section class="border-t-2 border-t-black text-center mx-auto sm:max-w-290 p-6">
 			<h1 class="text-5xl">Interesting topics!</h1>
-			<div class="flex justify-center p-6">
-				<a href="" class="p-4 hover:scale-105">
-					<img src="resources/MovieCategoryImage.png" alt="">
+			<div class="p-6 grid grid-cols-2 sm:grid-cols-4">
+				<a href="" class="p-4 hover:scale-105 min-w-30">
+					<img src="resources/MovieCategoryImage.png" alt="" loading="lazy">
 					<h2 class="text-4xl">Movies</h2>
 				</a>
-				<a href="" class="p-4 hover:scale-105">
-					<img src="resources/SpaceCategoryImage.png" alt="">
+				<a href="" class="p-4 hover:scale-105 min-w-30">
+					<img src="resources/SpaceCategoryImage.png" alt="" loading="lazy" class="">
 					<h2 class="text-4xl">Space</h2>
 				</a>
-				<a href="" class="p-4 hover:scale-105">
-					<img src="resources/BiologyCategoryImage.png" alt="">
+				<a href="" class="p-4 hover:scale-105 min-w-30">
+					<img src="resources/BiologyCategoryImage.png" alt="" loading="lazy">
 					<h2 class="text-4xl">Biology</h2>
 				</a>
-				<a href="" class="p-4 hover:scale-105">
-					<img src="resources/FoodCategoryImage.png" alt="">
+				<a href="" class="p-4 hover:scale-105 min-w-30">
+					<img src="resources/FoodCategoryImage.png" alt="" loading="lazy">
 					<h2 class="text-4xl">Food</h2>
 				</a>
 			</div>
 		</section>
 
-		<footer class="md:pl-[20%] md:pr-[20%] flex justify-between whitespace-nowrap text-white bg-[#1b1b1b]">
-			<div class="p-6 max-w-[30%]">
-				<h1 class="text-2xl">About</h1>
-				<p class="whitespace-normal">
-					Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text 
-				</p>
-			</div>
-			
-			<div class="p-6 max-w-20">
-				<h1 class="text-2xl">Media</h1>
-				<ul>
-					<li>
-						<a href="" class="flex gap-x-2 p-1"><img src="resources/Facebook.png" alt="">Facebook</a>
-					</li>
-					<li>
-						<a href="" class="flex gap-x-2 p-1"><img src="resources/Instagram.png" alt="">Instagram</a>
-					</li>
-					<li>	
-						<a href="" class="flex gap-x-2 p-1"><img src="resources/YouTube.png" alt="">Youtube</a>
-					</li>
-				</ul>
-			</div>
-			
-			<div class="p-6">
-				<h1 class="text-2xl">Contact</h1>
-				<ul>
-					<li>
-						<p>Phone Number: +46 12-345 67 89</p>
-					</li>
-					<li>
-						<p>E-mail: email@adress.org</p>
-					</li>
-					<li>	
-						<p>Address: 123AdressStreet</p>
-					</li>
-				</ul>
+		<footer class="whitespace-nowrap text-white bg-[#1b1b1b]">
+			<div class="m-auto sm:max-w-290 flex justify-between">
+				<div class="p-6 max-w-[30%]">
+					<h1 class="text-2xl">About</h1>
+					<p class="whitespace-normal">
+						Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text 
+					</p>
+				</div>
+				
+				<div class="p-6">
+					<h1 class="text-2xl">Media</h1>
+					<ul>
+						<li>
+							<a href="" class="flex gap-x-2 p-1"><img src="resources/Facebook.png" alt="" loading="lazy" class="max-w-5 object-contain">Facebook</a>
+						</li>
+						<li>
+							<a href="" class="flex gap-x-2 p-1"><img src="resources/Instagram.png" alt="" loading="lazy" class="max-w-5 object-contain">Instagram</a>
+						</li>
+						<li>	
+							<a href="" class="flex gap-x-2 p-1"><img src="resources/YouTube.png" alt="" loading="lazy" class="max-w-5 object-contain">Youtube</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="p-6">
+					<h1 class="text-2xl">Contact</h1>
+					<ul>
+						<li>
+							<p>Phone Number: +46 12-345 67 89</p>
+						</li>
+						<li>
+							<p>E-mail: email@adress.org</p>
+						</li>
+						<li>	
+							<p>Address: 123AdressStreet</p>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</footer>
+	<script>
+		function toggleHamburgerMenu() {
+			var e = document.getElementById('hamburgerMenuContent');
+			if (e.style.display == 'flex') {
+				e.style.display = 'none';
+			} else {
+				e.style.display = 'flex';
+			}
+		}
+	</script>
 	</body>
 </html>
