@@ -22,5 +22,10 @@ function createArticle() {
   return article;
 }
 
+function emptyFileInputField() {
+  document.getElementById('fArticleImage').value = null;
+}
+
 document.getElementById('articleSubmitButton').addEventListener('click', createArticle);
+document.getElementById('clearButton').addEventListener('click', emptyFileInputField);
 
