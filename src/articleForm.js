@@ -1,9 +1,19 @@
 import Article from './article.js'
+import { sendToastNotif } from './toastNotif.js'
 
 function registerArticle() {
   let titel = document.getElementById('fArticleTitel').value;
+  if (titel.replace(/ /g,'') === '') {
+    sendToastNotif('Missing titel!')
+    return;
+  }
 
   let content = document.getElementById('fArticleContent').value;
+  if (content.replace(/\s/g,'') === '') {
+    sendToastNotif('Missing content!')
+    return;
+  }
+
   let img = document.getElementById('fArticleImage').files[0];
 
   let article = new Article(titel, content, img);
@@ -15,6 +25,8 @@ function registerArticle() {
 
 function createArticle() {
   let article = registerArticle();
+
+  if (article === null) { return; }
 
   let articleElement = document.createElement('article');
   if (article.img != null && article.img != '') {
@@ -31,7 +43,7 @@ function createArticle() {
   articleContent.textContent = article.content;
   articleElement.appendChild(articleContent);
 
-  console.log(articleElement);
+  sendToastNotif("Article created!")
 
   return articleElement;
 }
