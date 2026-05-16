@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="output.css" rel="stylesheet">
+	</head>
+  <body class="flex justify-center">
+		<section class="w-2/3 p-8">
+				<label for="titel">Titel:</label> <br>
+				<input type="text" name="fArticleTitel" id="fArticleTitel" placeholder="Titel" required class="p-2 border rounded"> <br><br>
+				<label for="content">Content:</label> <br>
+				<textarea name="fArticleContent" id="fArticleContent" class="p-2 border rounded w-full h-100"></textarea> <br><br>
+				<label for="img">Image:</label>
+				<input type="file" name="fArticleImage" id="fArticleImage" accept=".png,.jpeg" class="hover:cursor-pointer shadow shadow-black p-1"> <br><br>
+				<button id="articleSubmitButton" class="hover:cursor-pointer border rounded p-1">Submit</button>
+			</section>
+			<div id="test"></div>
+	</body>
+	<script src="articleForm.js"></script>
+</html>
