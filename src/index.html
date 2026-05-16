@@ -18,7 +18,7 @@
 						<a href="" class="border rounded-2xl p-2 hover:bg-gray-200 hover:scale-110">Link 3</a>
 						<a href="" class="border rounded-2xl p-2 hover:bg-gray-200 hover:scale-110">Link 4</a>
 					</div>
-					<button type="button" onclick="toggleHamburgerMenu()" class="sm:hidden w-12 h-12 cursor-pointer mr-2">
+					<button type="button" id="hamburgerMenu" class="sm:hidden w-12 h-12 cursor-pointer mr-2">
 						<img src="resources/HamburgerMenuIcon.png" alt="">
 					</button>
 				</div>
@@ -149,15 +149,6 @@
 				</div>
 			</div>
 		</footer>
-	<script>
-		function toggleHamburgerMenu() {
-			var e = document.getElementById('hamburgerMenuContent');
-			if (e.style.display == 'flex') {
-				e.style.display = 'none';
-			} else {
-				e.style.display = 'flex';
-			}
-		}
-	</script>
 	</body>
+	<script src="hamburgerMenu.js"></script>
 </html>
