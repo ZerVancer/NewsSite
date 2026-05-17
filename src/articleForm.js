@@ -6,6 +6,9 @@ function registerArticle() {
   if (titel.replace(/ /g,'') === '') {
     sendToastNotif('Missing titel!')
     return;
+  } else if (localStorage.getItem(titel) != undefined) {
+    sendToastNotif('Titel already exists!')
+    return;
   }
 
   let content = document.getElementById('fArticleContent').value;
@@ -18,7 +21,7 @@ function registerArticle() {
 
   let article = new Article(titel, content, img);
   
-  localStorage.setItem(titel, article);
+  localStorage.setItem(titel, JSON.stringify(article));
 
   return article;
 }

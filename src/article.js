@@ -3,7 +3,7 @@ class Article {
     this.title = titel;
     this.content = content;
     this.img = img;
-    this.createdAt = Date.now;
+    this.createdAt = new Date();
   }
 }
 
