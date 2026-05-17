@@ -30,6 +30,7 @@
 				</div>
 			</nav>
 		</header>
+
 		<section class="flex justify-center">
 			<div id="form" class="w-2/3 p-8">
 				<label for="titel">Titel:</label> <br>
@@ -44,8 +45,6 @@
 				<button id="articleSubmitButton" class="hover:cursor-pointer border rounded p-1">Submit</button>
 			</div>
 		</section>
-
-		<div id="toast" class="bg-neutral-700 text-white p-4 fixed bottom-0 min-w-1/8 max-w-1/2 block invisible text-center"></div>
 	
 		<footer class="whitespace-nowrap text-white bg-[#1b1b1b]">
 			<div class="m-auto sm:max-w-290 flex justify-between">
@@ -87,6 +86,10 @@
 				</div>
 			</div>
 		</footer>
+
+		<div id="toast" class="fixed bottom-0 flex invisible justify-center w-full">
+			<p id="toastMsg" class="bg-neutral-700 text-white min-w-1/8 max-w-1/2 p-4 text-center "></p>
+		</div>
 	</body>
 	<script src="articleForm.js" type="module"></script>
 	<script src="hamburgerMenu.js"></script>

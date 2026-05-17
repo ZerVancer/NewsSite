@@ -26,10 +26,10 @@ function registerArticle() {
 function createArticle() {
   let article = registerArticle();
 
-  if (article === null) { return; }
+  if (article === undefined) { return; }
 
   let articleElement = document.createElement('article');
-  if (article.img != null && article.img != '') {
+  if (article.img != undefined) {
     let articleImg = document.createElement('img');
     articleImg.src = article.img;
     articleElement.appendChild(articleImg);
