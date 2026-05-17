@@ -31,29 +31,11 @@
 			</nav>
 		</header>
 
-		<section class="flex justify-center">
-			<div id="form" class="w-2/3 p-8">
-				<label for="titel">Titel:</label> <br>
-				<input type="text" name="fArticleTitel" id="fArticleTitel" placeholder="Titel" required class="p-2 border rounded"> <br><br>
-				<label for="content">Content:</label> <br>
-				<textarea name="fArticleContent" id="fArticleContent" class="p-2 border rounded w-full h-100"></textarea> <br><br>
-				<label for="img">Image:</label>
-				<!-- <div class="flex gap-5">
-					<input type="file" name="fArticleImage" id="fArticleImage" accept=".png,.jpeg" class="hover:cursor-pointer shadow shadow-black p-1 w-full max-w-100"> 
-					<button id="clearButton" class="hover:cursor-pointer p-1 border rounded">Clear</button>
-				</div> <br> -->
-				<!-- Temporary solve until download works -->
-				<select name="imgSelector" id="imgSelector" class="hover:cursor-pointer shadow shadow-black p-1">
-					<option value="">None</option>
-					<option value="BackToTheFuturePoster.png">Back To The Future</option>
-					<option value="LegoLogo.png">Lego</option>
-				</select> <br> <br>
-				<!--  -->
-				<button id="articleSubmitButton" class="hover:cursor-pointer border rounded p-1">Submit</button>
-			</div>
-		</section>
+    <section id="article">
+
+    </section>
 	
-		<footer class="whitespace-nowrap text-white bg-[#1b1b1b]">
+		<footer class="whitespace-nowrap text-white bg-[#1b1b1b] fixed bottom-0 w-full">
 			<div class="m-auto sm:max-w-290 flex justify-between">
 				<div class="p-6 max-w-[30%]">
 					<h1 class="text-2xl">About</h1>
@@ -98,6 +80,6 @@
 			<p id="toastMsg" class="bg-neutral-700 text-white min-w-1/8 max-w-1/2 p-4 text-center "></p>
 		</div>
 	</body>
-	<script src="articleForm.js" type="module"></script>
+	<script src="article.js" type="module"></script>
 	<script src="hamburgerMenu.js"></script>
 </html>

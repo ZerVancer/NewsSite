@@ -17,7 +17,11 @@ function registerArticle() {
     return;
   }
 
-  let img = document.getElementById('fArticleImage').files[0];
+  // let img = document.getElementById('fArticleImage').files[0];
+  // Temporary solve until download works
+  let img = document.getElementById('imgSelector').value;
+  if (img !== '') { img = 'resources/' + img }
+  console.log(img);
 
   let article = new Article(titel, content, img);
   
@@ -32,11 +36,16 @@ function createArticle() {
   if (article === undefined) { return; }
 
   let articleElement = document.createElement('article');
-  if (article.img != undefined) {
-    let articleImg = document.createElement('img');
-    articleImg.src = article.img;
-    articleElement.appendChild(articleImg);
-  }
+  // if (article.img != undefined) {
+  //   let articleImg = document.createElement('img');
+  //   articleImg.src = article.img;
+  //   articleElement.appendChild(articleImg);
+  // }
+  // Temporary solve until download works
+  let articleImg = document.createElement('img');
+  articleImg.src = article.img;
+  articleElement.appendChild(articleImg);
+
 
   let articleTitel = document.createElement('h2');
   articleTitel.textContent = article.titel;
