@@ -69,5 +69,5 @@ function emptyFileInputField() {
 }
 
 document.getElementById('articleSubmitButton').addEventListener('click', createArticle);
-document.getElementById('clearButton').addEventListener('click', emptyFileInputField);
+//document.getElementById('clearButton').addEventListener('click', emptyFileInputField);
 
