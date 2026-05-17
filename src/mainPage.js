@@ -3,8 +3,8 @@ import Article from "./article.js";
 const article1 = BttFArticle();
 const article2 = legoArticle();
 
-localStorage.setItem('Back To The Future', article1);
-localStorage.setItem('Lego', article2);
+localStorage.setItem('Back To The Future', JSON.stringify(article1));
+localStorage.setItem('Lego', JSON.stringify(article2));
 
 let sideArticle1 = document.getElementById('sideArticle1');
 let sideArticle2 = document.getElementById('sideArticle2');
@@ -45,3 +45,9 @@ function legoArticle() {
 function BttFArticle() {
   return new Article('Back To The Future', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'resources/BackToTheFuturePoster.png')
 }
+
+function clearLocalStorage() {
+  localStorage.clear();
+}
+
+document.getElementById('clearLS').addEventListener('click', clearLocalStorage);
