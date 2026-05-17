@@ -5,8 +5,33 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="output.css" rel="stylesheet">
 	</head>
-  <body class="flex justify-center">
-		<section class="w-2/3 p-8">
+  <body>
+		<header class="sticky z-2 top-0 bg-white border-b-4 border-green-600">
+			<nav class="m-auto flex flex-col sm:max-w-290">
+				<div id="navContent" class="flex flex-auto items-center justify-between m-1 sm:m-2 sm:ml-10 sm:mr-10 lg:m-2 ">
+					<a href="index.html" class="w-15">
+						<img src="resources/Symbol.png" loading="lazy"  alt="Logo">
+					</a>
+					<div class="hidden sm:flex items-center gap-x-6">
+						<a href="createArticle.html" class="border rounded-2xl p-2 hover:bg-gray-200 hover:scale-110">Create Article</a>
+						<a href="" class="border rounded-2xl p-2 hover:bg-gray-200 hover:scale-110">Link 2</a>
+						<a href="" class="border rounded-2xl p-2 hover:bg-gray-200 hover:scale-110">Link 3</a>
+						<a href="" class="border rounded-2xl p-2 hover:bg-gray-200 hover:scale-110">Link 4</a>
+					</div>
+					<button type="button" id="hamburgerMenu" class="sm:hidden w-12 h-12 cursor-pointer mr-2">
+						<img src="resources/HamburgerMenuIcon.png" alt="">
+					</button>
+				</div>
+				<div id="hamburgerMenuContent" class="hidden border-t-2 border-green-600 bg-gray-700 text-white flex-col gap-2">
+					<a href="createArticle.html" class="hover:bg-gray-200 hover:text-black p-2 pl-4 pr-4">Create Article</a>
+					<a href="" class="hover:bg-gray-200 hover:text-black p-2 pl-4 pr-4">Link 2</a>
+					<a href="" class="hover:bg-gray-200 hover:text-black p-2 pl-4 pr-4">Link 3</a>
+					<a href="" class="hover:bg-gray-200 hover:text-black p-2 pl-4 pr-4">Link 4</a>
+				</div>
+			</nav>
+		</header>
+		<section class="flex justify-center">
+			<div id="form" class="w-2/3 p-8">
 				<label for="titel">Titel:</label> <br>
 				<input type="text" name="fArticleTitel" id="fArticleTitel" placeholder="Titel" required class="p-2 border rounded"> <br><br>
 				<label for="content">Content:</label> <br>
@@ -14,12 +39,13 @@
 				<label for="img">Image:</label>
 				<div class="flex gap-5">
 					<input type="file" name="fArticleImage" id="fArticleImage" accept=".png,.jpeg"  class="hover:cursor-pointer shadow shadow-black p-1"> <br><br>
-					<button id="clearButton" class="hover:cursor-pointer">Clear</button>
-				</div>
+					<button id="clearButton" class="hover:cursor-pointer p-1 border rounded">Clear</button>
+				</div> <br>
 				<button id="articleSubmitButton" class="hover:cursor-pointer border rounded p-1">Submit</button>
-			</section>
+			</div>
+		</section>
 
-			<div id="toast" class="bg-neutral-700 text-white p-4 fixed bottom-0 min-w-1/8 max-w-1/2 block invisible text-center"></div>
+		<div id="toast" class="bg-neutral-700 text-white p-4 fixed bottom-0 min-w-1/8 max-w-1/2 block invisible text-center"></div>
 	</body>
 	<script src="articleForm.js" type="module"></script>
 </html>
