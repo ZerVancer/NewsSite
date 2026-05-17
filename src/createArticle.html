@@ -38,7 +38,7 @@
 				<textarea name="fArticleContent" id="fArticleContent" class="p-2 border rounded w-full h-100"></textarea> <br><br>
 				<label for="img">Image:</label>
 				<div class="flex gap-5">
-					<input type="file" name="fArticleImage" id="fArticleImage" accept=".png,.jpeg"  class="hover:cursor-pointer shadow shadow-black p-1"> <br><br>
+					<input type="file" name="fArticleImage" id="fArticleImage" accept=".png,.jpeg" class="hover:cursor-pointer shadow shadow-black p-1 w-full max-w-100"> 
 					<button id="clearButton" class="hover:cursor-pointer p-1 border rounded">Clear</button>
 				</div> <br>
 				<button id="articleSubmitButton" class="hover:cursor-pointer border rounded p-1">Submit</button>
@@ -46,6 +46,47 @@
 		</section>
 
 		<div id="toast" class="bg-neutral-700 text-white p-4 fixed bottom-0 min-w-1/8 max-w-1/2 block invisible text-center"></div>
+	
+		<footer class="whitespace-nowrap text-white bg-[#1b1b1b]">
+			<div class="m-auto sm:max-w-290 flex justify-between">
+				<div class="p-6 max-w-[30%]">
+					<h1 class="text-2xl">About</h1>
+					<p class="whitespace-normal">
+						Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text 
+					</p>
+				</div>
+				
+				<div class="p-6">
+					<h1 class="text-2xl">Media</h1>
+					<ul>
+						<li>
+							<a href="" class="flex gap-x-2 p-1"><img src="resources/Facebook.png" alt="" loading="lazy" class="max-w-5 object-contain">Facebook</a>
+						</li>
+						<li>
+							<a href="" class="flex gap-x-2 p-1"><img src="resources/Instagram.png" alt="" loading="lazy" class="max-w-5 object-contain">Instagram</a>
+						</li>
+						<li>	
+							<a href="" class="flex gap-x-2 p-1"><img src="resources/YouTube.png" alt="" loading="lazy" class="max-w-5 object-contain">Youtube</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="p-6">
+					<h1 class="text-2xl">Contact</h1>
+					<ul>
+						<li>
+							<p>Phone Number: +46 12-345 67 89</p>
+						</li>
+						<li>
+							<p>E-mail: email@adress.org</p>
+						</li>
+						<li>	
+							<p>Address: 123AdressStreet</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
 	</body>
 	<script src="articleForm.js" type="module"></script>
 	<script src="hamburgerMenu.js"></script>
